@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" style="touch-action: manipulation">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
+      integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body
+    class="h-100vh bg-blue-800"
+    style="font-family: 'Poppins', sans-serif; font-weight: 600"
+  >
+    <h1 class="text-center text-white text-lg md:text-3xl mt-6 md:mt-16">
+      Selamat Datang Di Permainan Batu Gunting Kertas!
+    </h1>
+    <h3 class="text-center text-white text-sm mt-4 sm:mb-4">
+      Pilih Salah Satu Pilihan Dibawah Untuk Mulai Bermain.
+    </h3>
+    <div
+      class="container mt-16 md:mt-8 h-96 w-6/12 bg-white p-10 rounded-xl"
+      style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      "
+    >
+      <div class="scores text-right -mt-4 mb-8 text-sm md:text-lg">
+        <p>Computer : <span id="c_score">0</span></p>
+        <p>User : <span id="u_score">0</span></p>
+      </div>
+      <div
+        class="
+          weapons
+          flex-col flex
+          md:flex-row
+          content-evenly
+          items-center
+          justify-between
+          md:justify-evenly
+          -mt-4
+        "
+      >
+        <button
+          onclick="checker('batu')"
+          class="
+            batu
+            m-2
+            md:m-0
+            h-12
+            w-12
+            md:h-28 md:w-28
+            bg-blue-700
+            rounded-full
+          "
+          style="cursor: pointer"
+        >
+          <i class="fas fa-hand-rock text-white text-md md:text-5xl"></i>
+        </button>
+        <button
+          onclick="checker('gunting')"
+          class="
+            gunting
+            m-2
+            md:m-0
+            h-12
+            w-12
+            md:h-28 md:w-28
+            bg-blue-700
+            rounded-full
+          "
+          style="cursor: pointer"
+        >
+          <i class="fas fa-hand-scissors text-white text-md md:text-5xl"></i>
+        </button>
+        <button
+          onclick="checker('kertas')"
+          class="
+            kertas
+            m-2
+            md:m-0
+            h-12
+            w-12
+            md:h-28 md:w-28
+            bg-blue-700
+            rounded-full
+          "
+          style="cursor: pointer"
+        >
+          <i class="fas fa-hand-paper text-white text-md md:text-5xl"></i>
+        </button>
+      </div>
+      <div class="details">
+        <p
+          class="
+            text-center
+            mt-32
+            md:mt-10
+            text-md
+            md:text-lg
+            sm:text-md
+            text-white
+            md:text-black
+          "
+          id="u_choice"
+        ></p>
+        <p
+          class="text-center mt-0 text-md md:text-lg text-white md:text-black"
+          id="c_choice"
+        ></p>
+        <p
+          class="
+            text-center
+            items-center
+            content-center
+            place-items-center
+            mt-2
+            md:w-48
+            text-lg text-white
+            rounded-lg
+            mx-auto
+            p-auto
+            mb-8
+            md:mb-0
+          "
+          id="hasil"
+        ></p>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
