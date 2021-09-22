@@ -2,13 +2,13 @@ function checker(input) {
   var pilihan = ["batu", "gunting", "kertas"];
   var num = Math.floor(Math.random() * 3);
 
-  document.getElementById(
-    "c_choice"
-  ).innerHTML = ` Komputer memilih <span>${pilihan[num].toUpperCase()}</span>`;
+  document.getElementById("c_choice").innerHTML = `Komputer memilih ${pilihan[
+    num
+  ].toUpperCase()}`;
 
   document.getElementById(
     "u_choice"
-  ).innerHTML = ` Kamu memilih <span>${input.toUpperCase()}</span>`;
+  ).innerHTML = `Kamu memilih ${input.toUpperCase()}`;
 
   let comp_choice = pilihan[num];
   switch (pilihan_object[input][comp_choice]) {
